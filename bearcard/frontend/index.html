@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bear Card</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Bear Card</h1>
+    <label>Tema
+      <select id="topic-select"></select>
+    </label>
+  </header>
+
+  <main class="grid">
+    <!-- Sección: sesión de estudio -->
+    <section class="panel" id="study">
+      <h2>Estudiar</h2>
+      <p id="study-meta" class="muted">Elige un tema y empieza.</p>
+      <article class="card" id="card" hidden>
+        <p id="card-question"></p>
+        <p id="card-answer" hidden></p>
+      </article>
+      <div class="actions">
+        <button id="btn-start">Empezar sesión</button>
+        <button id="btn-reveal" hidden>Mostrar respuesta</button>
+        <button id="btn-hit" class="ok" hidden>La sabía</button>
+        <button id="btn-miss" class="bad" hidden>No la sabía</button>
+      </div>
+    </section>
+
+    <!-- Sección: cargar tarjetas -->
+    <section class="panel" id="import">
+      <h2>Agregar tarjetas</h2>
+      <form id="form-card">
+        <input name="topic" placeholder="Tema" required>
+        <input name="subtopic" placeholder="Subtema">
+        <input name="question" placeholder="Pregunta" required>
+        <input name="answer" placeholder="Respuesta" required>
+        <button>Guardar tarjeta</button>
+      </form>
+      <label class="file">Importar CSV (tema, subtema, pregunta, respuesta)
+        <input type="file" id="csv-file" accept=".csv">
+      </label>
+      <p id="import-msg" class="muted"></p>
+    </section>
+
+    <!-- Sección: historial -->
+    <section class="panel wide" id="history">
+      <h2>Historial</h2>
+      <table>
+        <thead><tr><th>Tema</th><th>Pregunta</th><th>Resultado</th><th>Tiempo</th></tr></thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

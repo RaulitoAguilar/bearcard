@@ -1,0 +1,17 @@
+button {
+  background: var(--pine); color: #fff; border: 0; border-radius: 6px;
+  padding: 8px 14px; font: inherit; cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+button.ok { background: #3d7a4f; }
+button.bad { background: var(--berry); }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+input, select { font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 6px; width: 100%; margin-bottom: 8px; }
+.topbar select { width: auto; margin: 0 0 0 8px; }
+.card { border: 2px solid var(--honey); border-radius: var(--radius); padding: 20px; min-height: 120px; }
+#card-answer { border-top: 1px dashed var(--line); padding-top: 10px; color: var(--pine); font-weight: bold; }
+.file { display: block; margin-top: 8px; font-size: .9rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.hit { color: #3d7a4f; } .miss { color: var(--berry); }

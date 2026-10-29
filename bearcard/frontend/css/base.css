@@ -1,0 +1,20 @@
+:root {
+  --ink: #1d2b2a;
+  --paper: #f3f6f5;
+  --surface: #ffffff;
+  --pine: #2f5d50;
+  --honey: #e0a526;
+  --berry: #b4443c;
+  --line: #d3dedb;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+}
+h1, h2 { margin: 0; font-family: Georgia, serif; }
+.muted { color: #5d6f6c; }
